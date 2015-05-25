@@ -1,0 +1,10 @@
+{
+  "name": "AngularJS-FrameworkProjcet",
+  "version": "0.0.0",
+  "description": "AngularJS-FrameworkProjcet",
+  "main": "app.js",
+  "author": {
+    "name": "User",
+    "email": ""
+  }
+}

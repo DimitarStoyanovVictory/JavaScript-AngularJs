@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>02.StudentPage</Name>
+    <RootNamespace>02.Studentpage</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a7550fb8-5e04-4a1c-9f9a-3d01706df4c9</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartWebBrowser>false</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+    <Folder Include="lib\angular\" />
+    <Folder Include="lib\angular\docs\" />
+    <Folder Include="lib\angular\docs\components\" />
+    <Folder Include="lib\angular\docs\components\bootstrap-3.1.1\" />
+    <Folder Include="lib\angular\docs\components\bootstrap-3.1.1\css\" />
+    <Folder Include="lib\angular\docs\components\bootstrap-3.1.1\fonts\" />
+    <Folder Include="lib\angular\docs\components\bootstrap-3.1.1\js\" />
+    <Folder Include="lib\angular\docs\components\google-code-prettify-1.0.1\" />
+    <Folder Include="lib\angular\docs\components\google-code-prettify-1.0.1\src\" />
+    <Folder Include="lib\angular\docs\components\google-code-prettify-1.0.1\styles\" />
+    <Folder Include="lib\angular\docs\components\jquery-2.1.1\" />
+    <Folder Include="lib\angular\docs\components\lunr.js-0.4.2\" />
+    <Folder Include="lib\angular\docs\components\marked-0.3.3\" />
+    <Folder Include="lib\angular\docs\components\marked-0.3.3\lib\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\BoldItalic\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\Bold\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\ExtraBoldItalic\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\ExtraBold\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\Italic\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\LightItalic\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\Light\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\Regular\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\SemiboldItalic\" />
+    <Folder Include="lib\angular\docs\components\open-sans-fontface-1.0.4\fonts\Semibold\" />
+    <Folder Include="lib\angular\docs\css\" />
+    <Folder Include="lib\angular\docs\examples\" />
+    <Folder Include="lib\angular\docs\examples\example-%24filter\" />
+    <Folder Include="lib\angular\docs\examples\example-%24route-service\" />
+    <Folder Include="lib\angular\docs\examples\example-checkbox-input-directive\" />
+    <Folder Include="lib\angular\docs\examples\example-date-input-directive\" />
+    <Folder Include="lib\angular\docs\examples\example-datetimelocal-input-directive\" />
+    <Folder Include="lib\angular\docs\examples\example-email-input-directive\" />
+    <Folder Include="lib\angular\docs\examples\example-error-%24rootScope-inprog\" />
+    <Folder Include="lib\angular\docs\examples\example-example.csp\" />
+    <Folder Include="lib\angular\docs\examples\example-example100\" />
+    <Folder Include="lib\angular\docs\examples\example-example101\" />
+    <Folder Include="lib\angular\docs\examples\example-example102\" />
+    <Folder Include="lib\angular\docs\examples\example-example103\" />
+    <Folder Include="lib\angular\docs\examples\example-example104\" />
+    <Folder Include="lib\angular\docs\examples\example-example105\" />
+    <Folder Include="lib\angular\docs\examples\example-example106\" />
+    <Folder Include="lib\angular\docs\examples\example-example107\" />
+    <Folder Include="lib\angular\docs\examples\example-example108\" />
+    <Folder Include="lib\angular\docs\examples\example-example109\" />
+    <Folder Include="lib\angular\docs\examples\example-example10\" />
+    <Folder Include="lib\angular\docs\examples\example-example110\" />
+    <Folder Include="lib\angular\docs\examples\example-example111\" />
+    <Folder Include="lib\angular\docs\examples\example-example112\" />
+    <Folder Include="lib\angular\docs\examples\example-example113\" />
+    <Folder Include="lib\angular\docs\examples\example-example114\" />
+    <Folder Include="lib\angular\docs\examples\example-example115\" />
+    <Folder Include="lib\angular\docs\examples\example-example116\" />
+    <Folder Include="lib\angular\docs\examples\example-example117\" />
+    <Folder Include="lib\angular\docs\examples\example-example11\" />
+    <Folder Include="lib\angular\docs\examples\example-example12\" />
+    <Folder Include="lib\angular\docs\examples\example-example13\" />
+    <Folder Include="lib\angular\docs\examples\example-example14\" />
+    <Folder Include="lib\angular\docs\examples\example-example15\" />
+    <Folder Include="lib\angular\docs\examples\example-example16\" />
+    <Folder Include="lib\angular\docs\examples\example-example17\" />
+    <Folder Include="lib\angular\docs\examples\example-example18\" />
+    <Folder Include="lib\angular\docs\examples\example-example19\" />
+    <Folder Include="lib\angular\docs\examples\example-example1\" />
+    <Folder Include="lib\angular\docs\examples\example-example20\" />
+    <Folder Include="lib\angular\docs\examples\example-example21\" />
+    <Folder Include="lib\angular\docs\examples\example-example22\" />
+    <Folder Include="lib\angular\docs\examples\example-example23\" />
+    <Folder Include="lib\angular\docs\examples\example-example24\" />
+    <Folder Include="lib\angular\docs\examples\example-example25\" />
+    <Folder Include="lib\angular\docs\examples\example-example26\" />
+    <Folder Include="lib\angular\docs\examples\example-example2\" />
+    <Folder Include="lib\angular\docs\examples\example-example\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+</Project>

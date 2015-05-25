@@ -1,0 +1,59 @@
+<h3>Video List</h3>
+
+<div class="sortAndFilter">
+	<div class="sort">
+		<p>Sort videos by:</p>
+		<select ng-model="sortOrder">
+			<option value="title" selected>Title</option>
+			<option value="length">Length</option>
+			<option value="-date">Date</option>
+			<option value="-subscribers">Subscribers</option>
+		</select>
+	</div>
+	<div class="filter">
+		<p>Filter videos by:</p>
+		<label>Subtitles:</label>
+		<p>
+			<input type="radio" name="subs" value="" ng-model="subs"> All
+			<input type="radio" name="subs" value="true" ng-model="subs"> Yes
+			<input type="radio" name="subs" value="false" ng-model="subs"> No
+		</p>
+		<label>Date:</label>
+		<p>
+			<input type="date" ng-model="filterDate">
+		</p>
+		<label>Categories:</label>
+		<select ng-model="filterCategory">
+			<option value="" selected>All</option>
+			<option ng-repeat="category in categories" value="{{category}}">{{category}}</option>
+		</select>
+	</div>
+</div>
+
+
+<br/>
+
+<ul class="videos-container">
+	<li ng-repeat="video in videos | orderBy:sortOrder | filter:{hasSubtitles: subs, category:filterCategory} | dateFilter:filterDate" class="video-item">
+		<img ng-src="{{video.pictureUrl}}" alt="{{video.title}}" class="video-thumbnail">
+		<p>
+			<strong>Title: </strong>{{video.title}}<br>
+			<strong>Length: </strong>{{video.length}}<br>
+			<strong>Category: </strong>{{video.category}}<br>
+			<strong>Subscribers: </strong>{{video.subscribers}}<br>
+			<strong>Date: </strong>{{video.date | date:'MM/dd/yyyy'}}<br>
+			<strong>Subtitles: </strong>{{video.hasSubtitles | checkmark}}<br>
+			<strong>Comments:</strong><br>
+		</p>
+		<ul>
+			<li ng-repeat="comment in video.comments">
+			from: {{comment.username}}<br/>
+			text: {{comment.content}}<br/>
+			likes: {{comment.likes}}<br/>
+			date: {{comment.date | date:'MM/dd/yyyy hh:mm:ss'}}<br/>
+			url: {{comment.websiteUrl}}
+			</li>
+		</ul>
+
+	</li>
+</ul>

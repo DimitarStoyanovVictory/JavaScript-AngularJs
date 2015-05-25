@@ -1,0 +1,52 @@
+<form class="add-video-form" name="addVideoForm">
+    <div class="form-group" ng-class="{ 'has-error' : addVideoForm.name.$invalid && !addVideoForm.name.$pristine }">
+        <label>Title: *</label>
+        <input type="text" name="name" class="form-control" ng-model="video.title" required placeholder="Enter title...">
+        <p ng-show="addVideoForm.name.$invalid && !addVideoForm.name.$pristine" class="help-block">Title is required.</p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : addVideoForm.length.$invalid && !addVideoForm.length.$pristine }">
+        <label>Length:</label>
+        <input type="number" name="length" class="form-control" ng-model="video.length" placeholder="Enter length...">
+        <p ng-show="addVideoForm.length.$invalid && !addVideoForm.length.$pristine" class="help-block">Length must be a valid number.</p>
+
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : addVideoForm.category.$invalid && !addVideoForm.category.$pristine }">
+        <label>Category: *</label>
+        <input type="text" name="category" class="form-control" ng-model="video.category" required placeholder="Enter category...">
+        <p ng-show="addVideoForm.category.$invalid && !addVideoForm.category.$pristine" class="help-block">Category is required.</p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : addVideoForm.subscribers.$invalid && !addVideoForm.subscribers.$pristine }">
+        <label>Subscribers:</label>
+        <input type="number" name="subscribers" class="form-control" ng-model="video.subscribers" placeholder="Enter subscribers...">
+        <p ng-show="addVideoForm.subscribers.$invalid && !addVideoForm.subscribers.$pristine" class="help-block">Subscribers must be a valid number.</p>
+
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : addVideoForm.date.$invalid && !addVideoForm.date.$pristine }">
+        <label>Date:</label>
+        <input type="date" name="date" class="form-control" ng-model="video.date" placeholder="Enter date...">
+        <p ng-show="addVideoForm.date.$invalid && !addVideoForm.date.$pristine" class="help-block">Invalid date.</p>
+
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : addVideoForm.date.$invalid && !addVideoForm.date.$pristine }">
+        <label>Subtitles:</label>
+        <p>
+            <input type="radio" name="subs" value="true" ng-model="video.hasSubtitles"> Yes
+            <input type="radio" name="subs" value="false" ng-model="video.hasSubtitles"> No
+        </p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : addVideoForm.pictureUrl.$invalid && !addVideoForm.pictureUrl.$pristine }">
+        <label>Image URL: *</label>
+        <input type="text" name="pictureUrl" required ng-pattern="/\.(gif|jpg|jpeg|tiff|png)$/i" class="form-control" ng-model="video.pictureUrl" placeholder="Enter picture URL...">
+        <p ng-show="addVideoForm.pictureUrl.$invalid && !addVideoForm.pictureUrl.$pristine" class="help-block">Invalid URL.</p>
+
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Save" ng-click="addVideo(video, addVideoForm)"/>
+    <button class="btn btn-default" ng-click="cancelSave()">Cancel</button>
+</form>

@@ -1,0 +1,75 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 20px;
+}
+
+h1 {
+	margin-bottom: 30px !important;
+}
+
+.videos-container {
+	font-size: 0.8em;
+	padding-left: 0;
+}
+
+.video-item {
+	display: inline-block;
+	float: left;
+	width: 15%;
+	margin-left: 0;
+	margin-right: 15px;
+	padding: 5px;
+	background-color: linen;
+	border: 1px solid darkolivegreen;
+	border-radius: 5px;
+}
+
+.video-thumbnail {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.add-video-form {
+	background-color: linen;
+	padding: 5px;
+	border: 1px solid darkolivegreen;
+	border-radius: 5px;
+	width: 30%;
+}
+
+input[type='text'] {
+	width: 90%;
+	margin-bottom: 5px;
+}
+
+input[type='number'] {
+	width: 90%;
+	margin-bottom: 5px;
+}
+
+input.ng-dirty.ng-invalid {
+	background-color: pink; !important
+}
+
+input.ng-dirty.ng-valid.validity {
+	background-color: darkseagreen; !important
+}
+
+.sortAndFilter {
+	background-color: linen;
+	padding: 5px;
+	border: 1px solid darkolivegreen;
+	border-radius: 5px;
+	width: 30%;
+	height: 250px;
+}
+
+.sort, .filter {
+	display: inline-block;
+	float: left;
+	margin: 10px;
+	border: 1px solid darkolivegreen;
+	padding: 5px;
+	border-radius: 5px;
+}

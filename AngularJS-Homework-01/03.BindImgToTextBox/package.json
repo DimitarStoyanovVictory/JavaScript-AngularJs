@@ -1,0 +1,10 @@
+{
+  "name": "03.BindImgToTextBox",
+  "version": "0.0.0",
+  "description": "03.BindImgToTextBox",
+  "main": "app.js",
+  "author": {
+    "name": "User",
+    "email": ""
+  }
+}

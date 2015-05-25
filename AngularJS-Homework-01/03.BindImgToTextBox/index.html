@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ImgToTextBox">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body ng-controller="AddImgToInputTag">
+
+<p>Enter the url of the photo !!!</p>
+<input ng-model="imgSrc" placeholder="Enter the url of a image" /><br />
+<img ng-src="{{imgSrc}}" /> <!--You can put your ng-controller here and the image function will still work-->
+
+<script src="lib/angular/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controller.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "02.StudentPage-",
+  "version": "0.0.0",
+  "description": "02.StudentPage!",
+  "main": "app.js",
+  "author": {
+    "name": "User",
+    "email": ""
+  }
+}

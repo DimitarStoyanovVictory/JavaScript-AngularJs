@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body ng-app="app">
+Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide"><br />
+<div>
+    Show:
+    <div class="check-element animate-show" ng-show="checked">
+        <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+    </div>
+</div>
+<div>
+    Hide:
+    <div class="check-element animate-show" ng-hide="checked">
+        <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
+    </div>
+</div>
+<script src="lib/angular/angular.js"></script>
+<script>
+    var app = angular.module('app');
+    var thumbsUp = element(by.css('span.glyphicon-thumbs-up'));
+    var thumbsDown = element(by.css('span.glyphicon-thumbs-down'));
+
+    it('should check ng-show / ng-hide', function () {
+        expect(thumbsUp.isDisplayed()).toBeFalsy();
+        expect(thumbsDown.isDisplayed()).toBeTruthy();
+
+        element(by.model('checked')).click();
+
+        expect(thumbsUp.isDisplayed()).toBeTruthy();
+        expect(thumbsDown.isDisplayed()).toBeFalsy();
+    });
+</script>
+</body>
+</html>

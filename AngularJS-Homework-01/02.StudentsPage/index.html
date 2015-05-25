@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Students Page">
+<head>
+    <meta charset="utf-8" />
+    <title>Student Page</title>
+</head>
+<body ng-controller="StudentInfo">
+
+<h1>All students</h1>
+
+<ul>
+    <li ng-repeat="student in students">
+        Name: {{student.name}}<br/>
+        Photo: <br/><img ng-src="http://www.nakov.com/wp-content/uploads/2014/05/{{student.photo}}"/><br/>
+        Grade: {{student.grade}}<br/>
+        School: {{student.school}}<br/>
+        Teacher: {{student.teacher}}<br/>
+    </li>
+</ul>
+
+<script src="lib/angular/angular.js"></script>
+<script>
+
+    var app = angular.module('Students Page', []);
+
+    app.controller('StudentInfo', function($scope) {
+
+        var allStudents = {
+            firstStudent: {
+                name: 'Mario Peshev',
+                photo: 'image5.png',
+                grade: '!!!',
+                school: 'NASA-Developer',
+                teacher: 'Bill Gates'
+            },
+            secondStudent: {
+                name: 'Gosho Goshev',
+                photo: 'image_thumb3.png',
+                grade: 'Level:3',
+                school: 'SoftUni',
+                teacher: 'Dimitar Stoyanov'
+            },
+            thirdStudent: {
+                name: 'Blond man',
+                photo: 'SoftUni-courses_thumb.png',
+                grade: 'None',
+                school: 'SoftUni',
+                teacher: 'None'
+            },
+
+        }
+
+        $scope.students = allStudents;
+    });
+
+</script>
+</body>
+</html>
