@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "AngularJS-FrameworkProjcet", "AngularJS-FrameworkProjcet\AngularJS-FrameworkProjcet.njsproj", "{FB2D0EA8-F8C4-48C7-B913-4761DE321C68}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Test-all", "Test-all\Test-all.njsproj", "{F21B4A21-87BC-415E-A941-B6958CCE5242}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Ng-Tests", "Ng-Tests\Ng-Tests.njsproj", "{C86C9AFE-9296-4711-96DA-C90F125A74B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FB2D0EA8-F8C4-48C7-B913-4761DE321C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB2D0EA8-F8C4-48C7-B913-4761DE321C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB2D0EA8-F8C4-48C7-B913-4761DE321C68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21B4A21-87BC-415E-A941-B6958CCE5242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21B4A21-87BC-415E-A941-B6958CCE5242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21B4A21-87BC-415E-A941-B6958CCE5242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21B4A21-87BC-415E-A941-B6958CCE5242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86C9AFE-9296-4711-96DA-C90F125A74B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86C9AFE-9296-4711-96DA-C90F125A74B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86C9AFE-9296-4711-96DA-C90F125A74B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86C9AFE-9296-4711-96DA-C90F125A74B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

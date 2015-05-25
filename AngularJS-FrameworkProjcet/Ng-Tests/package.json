@@ -1,0 +1,10 @@
+{
+  "name": "Ng-Tests",
+  "version": "0.0.0",
+  "description": "Ng-Tests",
+  "main": "app.js",
+  "author": {
+    "name": "User",
+    "email": ""
+  }
+}
