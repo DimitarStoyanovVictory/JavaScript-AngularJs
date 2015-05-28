@@ -1,7 +1,7 @@
 ﻿app.factory('storage', function () {
 	
-	function Add(key, data) {
-		sessionStorage[key] = data;
+	function Add(key, accessToken) {
+		sessionStorage[key] = accessToken;
 	}
 	
 	function Get(key) {

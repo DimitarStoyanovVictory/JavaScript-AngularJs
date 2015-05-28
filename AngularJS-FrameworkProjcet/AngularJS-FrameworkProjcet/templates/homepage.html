@@ -27,6 +27,42 @@
     </form>
 </section>
 <section ng-if="showHomepage">
-    <h1>Welcome</h1>
-    <p ng-bind="userInfo" data-ng-init="showUserInfo()"></p>
+    <header>
+        <article id="headerItems">
+            <ul>
+                <li>
+                    <h1>Welcome</h1>
+                </li>
+                <li>
+                    <p ng-bind="nameOfOwner" data-ng-init="showUserInfo()"></p>
+                </li>
+                <li>
+                    <input id="searchInput" type="text" ng-model="nameOfUser" placeholder="Enter name of friend to search" />
+                </li>
+                <li>
+                    <a ng-click="searchUser(nameOfUser)"><img src="images/searchIcon.png" id="searchIcon" /></a>
+                </li>
+                <li>
+                    <img src="images/newsFeed.png" alt="" />
+                    <img src="images/addFriend.png" alt="" />
+                    <a><img src="images/editProfile.png" ng-click="showEditProfile()" /></a>
+                    <a><img src="images/logout.png" ng-click="logoutFromProfile()" /></a>
+                </li>
+            </ul>
+        </article>
+    </header>
+    <article>
+        <ul>
+            <li ng-repeat="user in users">
+                Name: {{user.name}};
+            </li>
+        </ul>
+    </article>
+    <article id="editProfile" ng-if="showEditProfile">
+        <h1>Set icon url:</h1>
+        <form id="editProfileForm">
+            <input type="file" id="imgFile"/>
+            <input type="submit" ng-click="getImgBase64()"/>
+        </form>
+    </article>
 </section>

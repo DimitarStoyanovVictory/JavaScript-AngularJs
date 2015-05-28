@@ -31,8 +31,24 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="index.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="templates\homepage.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scripts\" />
+    <Folder Include="scripts\controllers\" />
+    <Folder Include="scripts\directives\" />
+    <Folder Include="scripts\services\" />
+    <Folder Include="templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="scripts\app.js" />
+    <Compile Include="scripts\controllers\UserCtrl.js" />
+    <Compile Include="scripts\directives\fileReader.js" />
+    <Compile Include="scripts\services\storage.js" />
+    <Compile Include="scripts\services\userData.js" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
 </Project>

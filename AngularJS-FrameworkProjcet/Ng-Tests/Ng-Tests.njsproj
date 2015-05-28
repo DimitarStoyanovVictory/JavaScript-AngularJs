@@ -32,6 +32,7 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Content Include="HTML1.html" />
+    <Content Include="HTML2.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>

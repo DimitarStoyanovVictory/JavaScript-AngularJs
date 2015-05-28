@@ -3,6 +3,36 @@
 <head>
     <meta charset="utf-8" />
     <title>Friendsbook</title>
+    <style>
+        #searchInput {
+            width: 200px;
+        }
+
+        #searchIcon {
+            width: 16px;
+            height: 16px;
+            display: block;
+            position: relative;
+            right: 22px;
+            top: 4px;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        #headerItems {
+            display: inline-block;
+        }
+
+        #editProfile {
+        }
+    </style>
 </head>
 <body ng-app="Friendsbook">
     <div class="container">
@@ -12,10 +42,12 @@
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/angular-route.js"></script>
     <script src="lib/angular/angular-sanitize.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <script src="scripts/app.js"></script>
     <script src="scripts/services/storage.js"></script>
     <script src="scripts/services/userData.js"></script>
     <script src="scripts/controllers/UserCtrl.js"></script>
+    <script src="scripts/directives/fileReader.js"></script>
 </body>
 </html>
