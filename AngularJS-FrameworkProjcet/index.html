@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Friendsbook</title>
+    <style>
+        #friendsbook {
+            background-image: url("images/welcomebackground.png");
+            height: 900px;
+            background-size: 2000px 950px;
+        }
+
+        #welcomeFriendsbook {
+            padding-left: 40%;
+            padding-top: 5%;
+        }
+
+        #login {
+            width: 28%;
+            margin-left: 36%;
+            margin-right: 36%;
+            border: solid black;
+        }
+
+        #login label {
+            margin-left: 2%;    
+        }
+
+        #login h1 {
+            padding-left: 45%;
+            padding-bottom: 2%;
+        }
+
+        #loginSubmit {
+            margin-left: 48%;
+            margin-top: 4%;
+            margin-bottom: 4%;
+        }
+
+        #register {
+            margin-top: 2%;
+            margin-left: 36%;
+            width: 24%;
+            border: solid black;
+            height: 320px;
+            padding-left: 4%;
+        }
+
+        #registerMain h1 {
+            margin-left: 35%;
+        }
+
+        #registerMain label {
+            display: block;
+            margin-top: 4%;
+        }
+
+        #registerMain label input {
+            float: right;
+            margin-right: 10%;
+            width: 60%;
+
+        }   
+
+        #labelGender {
+            display: inline-block;
+            margin-top: 4%;
+        }
+
+        #submitRegister {
+            position: relative;
+            left: 46px;
+            top: 30px;
+        }
+
+        #searchInput {
+            width: 200px;
+        }
+
+        #searchIcon {
+            width: 16px;
+            height: 16px;
+            display: block;
+            position: relative;
+            right: 22px;
+            top: 4px;
+        }
+
+        #welcomeProfileName {
+            margin-left: 20%;
+            font-size: 3em;
+        }
+
+        #myUserName {
+            margin-left: 3%;
+            font-size: 1.6em;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        img#myPicture {
+            margin-left: 40%;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            top: 40px;
+        }
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        #headerItems {
+            display: inline-block;
+        }
+
+        #editProfileForm input{
+            display: block;
+        }
+    </style>
+</head>
+<body ng-app="Friendsbook">
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/angular-sanitize.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/storage.js"></script>
+    <script src="scripts/controllers/UserCtrl.js"></script>
+    <script src="scripts/services/userData.js"></script>
+    <script src="scripts/directives/fileReader.js"></script>
+</body>
+</html>
