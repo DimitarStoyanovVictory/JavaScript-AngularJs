@@ -1,0 +1,126 @@
+﻿<section id="friendsbook">
+    <section ng-if="showRegAndUserpage">
+        <header>
+            <h1 id="welcomeFriendsbook">Weloce to Friendsbook Social Network</h1>
+        </header>
+        <main>
+            <form id="login">
+                <h1>Login</h1>
+                <label id="usernameLabel">
+                    Username:
+                    <input type="text" placeholder="username..." required ng-model="loginUserInfo.username" />
+                </label>
+                <label>
+                    Password:
+                    <input type="password" placeholder="password..." required ng-model="loginUserInfo.password" />
+                </label>
+                <input type="submit" value="Login" ng-click="loginUser(loginUserInfo)" id="loginSubmit" />
+            </form>
+            <form id="register">
+                <div id="registerMain">
+                    <h1>Register</h1>
+                    <label>
+                        Username:
+                        <input type="text" placeholder="username" ng-model="registerUserInfo.username" />
+                    </label>
+                    <label>
+                        Password:
+                        <input type="password" placeholder="enter password" ng-model="registerUserInfo.password" />
+                    </label>
+                    <label>
+                        Confrim password:
+                        <input type="password" placeholder="confirm password" ng-model="registerUserInfo.confirmPassword" />
+                    </label>
+                    <label>
+                        Full name:
+                        <input type="text" placeholder="name" ng-model="registerUserInfo.name">
+                    </label>
+                    <label>
+                        Email address:
+                        <input type="email" placeholder="Email or mobile number" ng-model="registerUserInfo.email" />
+                    </label>
+                </div>
+                <div id="labelGender">
+                    <label for="male">
+                        Male
+                        <input type="radio" name="gender" id="male" value="0" ng-model="registerUserInfo.gender" />
+                    </label>
+                    <label>
+                        Female
+                        <input type="radio" name="gender" id="female" value="1" ng-model="registerUserInfo.gender" />
+                    </label>
+                </div>
+                <input type="submit" ng-click="registerUser(registerUserInfo)" id="submitRegister" value="Register" />
+            </form>
+        </main>
+        <footer>
+            <a href="https://www.facebook.com"></a>
+        </footer>
+    </section>
+    <section ng-if="showHomepage" id="homepage">
+        <header>
+            <article id="headerItems">
+                <ul>
+                    <li id="welcomeProfileName">
+                        <h1>Welcome</h1>
+                    </li>
+                    <li>
+                        <img id="myPicture" ng-src="{{profileImageData}}" />
+                    </li>
+                    <li id="myUserName">
+                        <p ng-bind="nameOfOwner"></p>
+                    </li>
+                    <li id="userTools">
+                        <img id="newsFeed" src="images/newsFeed.png"/>
+                        <img src="images/addFriend.png"/>
+                        <a><img src="images/editProfile.png" ng-click="showEditProfileSettings()"/></a>
+                        <a><img src="images/changePass.png" ng-click=""/></a>
+                        <a><img src="images/logout.png" ng-click="logoutFromProfile()"/></a>
+                    </li>
+                    <li>
+                        <input id="searchInput" type="text" ng-model="nameOfUser" placeholder="Search name..."/>
+                        <a ng-click="searchUser(nameOfUser)"><img src="images/searchIcon.png" id="searchIcon" /></a>
+                    </li>
+                </ul>
+            </article>
+        </header>
+        <article id="searchedUsers" ng-if="showSearchedUsers">
+            <ul>
+                <li ng-repeat="user in users">
+                    <img ng-src="{{user.profileImageData}}" />
+                    <p>{{user.name}}</p>
+                </li>
+            </ul>
+        </article>
+        <article id="editProfile" ng-if="showEditProfile">
+            <form id="editProfileForm">
+                <label>
+                    Full name: 
+                    <input type="text" ng-model="changeUser.username" placeholder="Change full name"/>
+                </label>
+                <label>
+                    Email:
+                    <input type="text" ng-model="changeUser.email" placeholder="Change email"/>
+                </label>
+                <label>
+                    Gender: 
+                    <input type="text" ng-model="changeUser.gender" placeholder="Change gender"/>
+                </label>
+                <label>
+                    My image:
+                    <input type="file" id="profileImgData" />
+                </label>
+                <label>
+                    Cover image:
+                    <input type="file" id="coverImgData"/>
+                </label>
+                <label>
+                    <input type="submit" ng-click="getImages()" value="Submit images" id="submitImages" />
+                </label>
+                <label id="submitChangeLabel">
+                    <input type="submit" ng-click="editProfile(changeUser)" value="Submit changes" id="submitChanges" />
+                </label>
+            </form>
+        </article>
+    </section>
+</section>

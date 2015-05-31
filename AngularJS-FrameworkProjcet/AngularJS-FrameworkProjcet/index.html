@@ -4,21 +4,124 @@
     <meta charset="utf-8" />
     <title>Friendsbook</title>
     <style>
+        #friendsbook {
+            background-image: url("images/welcomebackground.png");
+            height: 900px;
+            background-size: 2000px 950px;
+        }
+
+        #welcomeFriendsbook {
+            padding-left: 40%;
+            padding-top: 5%;
+        }
+
+        #login {
+            width: 28%;
+            margin-left: 36%;
+            margin-right: 36%;
+            border: solid black;
+        }
+
+        #login label {
+            margin-left: 2%;
+        }
+
+        #login h1 {
+            padding-left: 45%;
+            padding-bottom: 2%;
+        }
+
+        #loginSubmit {
+            margin-left: 48%;
+            margin-top: 4%;
+            margin-bottom: 4%;
+        }
+
+        #register {
+            margin-top: 2%;
+            margin-left: 36%;
+            width: 24%;
+            border: solid black;
+            height: 320px;
+            padding-left: 4%;
+        }
+
+        #registerMain h1 {
+            margin-left: 35%;
+        }
+
+        #registerMain label {
+            display: block;
+            margin-top: 4%;
+        }
+
+        #registerMain label input {
+            float: right;
+            margin-right: 10%;
+            width: 60%;
+        }
+
+        #labelGender {
+            display: inline-block;
+            margin-top: 4%;
+        }
+
+        #submitRegister {
+            position: relative;
+            left: 46px;
+            top: 30px;
+        }
+
         #searchInput {
-            width: 200px;
+            width: 226px;
+            height: 24px;
+            padding: 20px;
+            border-radius: 20px;
+            display: block;
+            position: absolute;
+            right: 285px;
+            top: 84px;
+            font-size: 1.2em;
         }
 
         #searchIcon {
-            width: 16px;
-            height: 16px;
+            width: 24px;
+            height: 24px;
             display: block;
-            position: relative;
-            right: 22px;
-            top: 4px;
+            position: absolute;
+            right: 309px;
+            top: 106px;
+        }
+
+        #headerItems {
+            display: inline-block;
+            width: 1860px;
+        }
+
+        #welcomeProfileName {
+            margin-left: 10%;
+            margin-right: 2%;
+            font-size: 3em;
+        }
+
+        #myUserName {
+            margin-left: 2%;
+            font-size: 1.6em;
         }
 
         img {
             cursor: pointer;
+        }
+
+        #myPicture {
+            position: relative;
+            top: 32px;
+        }
+
+        #userTools {
+            margin-left: 2%;
+            position: relative;
+            top: 16px;
         }
 
         ul li {
@@ -26,11 +129,74 @@
             display: inline-block;
         }
 
-        #headerItems {
-            display: inline-block;
+        #editProfile {
+            border: 1px solid black;
+            padding-left: 5%;
+            padding-top: 4%;
+            padding-bottom: 2%;
+            margin-left: 37%;
+            margin-right: 36%;
         }
 
-        #editProfile {
+        #editProfileForm label {
+            display: block;
+            padding-bottom: 4%;
+            margin-right: 20%;
+        }
+
+        #editProfileForm input {
+            float: right;
+        }
+
+        #submitImages {
+            margin-right: 30%;
+            margin-top: 2%;
+            width: 40%;
+        }
+
+        #submitChanges {
+            margin-top: 4%;
+            margin-right: 30%;
+            width: 40%;
+        }
+
+        #profileImgData {
+            position: relative;
+            left: 20%;
+        }
+
+        #coverImgData {
+            position: relative;
+            left: 20%;
+        }
+
+        #submitChangeLabel {
+            margin-bottom: 10%;
+        }
+
+        #searchedUsers {
+            position: absolute;
+            left: 71%;
+            top: 26%;
+            background-color: white;
+            width: 14%;
+        }
+
+        #searchedUsers ul li {
+            display: block;
+        }
+
+        #searchedUsers ul li p {
+            display: inline;
+            position: relative;
+            left: 26px;
+            bottom: 36px;
+            font-size: 0.9em;
+        }
+        
+        #searchedUsers ul li img {
+            height: 70px;
+            margin-top: 4%;
         }
     </style>
 </head>
@@ -46,8 +212,8 @@
 
     <script src="scripts/app.js"></script>
     <script src="scripts/services/storage.js"></script>
-    <script src="scripts/services/userData.js"></script>
     <script src="scripts/controllers/UserCtrl.js"></script>
+    <script src="scripts/services/userData.js"></script>
     <script src="scripts/directives/fileReader.js"></script>
 </body>
 </html>
